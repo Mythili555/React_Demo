@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16 # Always uses the latest available Node.js version
+      nodejs: 18 # Always uses the latest available Node.js version
     commands:
       - echo Installing dependencies...
       - npm install
