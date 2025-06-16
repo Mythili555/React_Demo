@@ -11,14 +11,16 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build # Builds the React app
+      - echo "Build folder contents:"
+      - ls -la build
   post_build:
     commands:
-    #  - echo Build completed on `date`
-    - echo "Build completed on $(date)"
-    - echo "Syncing to S3..."
-    - aws s3 sync build/ s3://my-react-app-555a --delete
-    - echo "Invalidating CloudFront cache..."
-    - aws cloudfront create-invalidation --distribution-id E2A8HC68O52XD0 --paths "/*"
+  #  - echo Build completed on `date`
+     - echo "Build completed on $(date)"
+     - echo "Syncing to S3..."
+     - aws s3 sync build/ s3://my-react-app-555a --delete
+     - echo "Invalidating CloudFront cache..."
+     - aws cloudfront create-invalidation --distribution-id E2A8HC68O52XD0 --paths "/*"
 
 artifacts:
   files:
