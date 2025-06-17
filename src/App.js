@@ -11,8 +11,8 @@ function App() {
     <Router>
       <Home1 />
       <Routes>
-        <Route path="/Home" element={<Home-updated />}></Route>
-        <Route path="/Book" element={<Books-updated />}></Route>
+        <Route path="/Home" element={<HomeV1 />}></Route>
+        <Route path="/Book" element={<BooksV1 />}></Route>
         <Route path="/Electronics/Desktop" element={<Desktop />}></Route>
         <Route path="/Electronic" element={<Electronics />}></Route>
 
